@@ -11,9 +11,24 @@ spring:
     platform: h2
     schema: classpath:schema.sql
     data: classpath:data.sql
+  application:
+    name: microservice-provider-user
 logging:
   level:
     root: info
     org.hibernate: info
     org.hibernate.type.descriptor.sql.BasicBinder: trace
     org.hibernate.type.descriptor.sql.BasicExtractor: trace
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#      高可用,http://peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@

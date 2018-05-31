@@ -1,4 +1,4 @@
-package com.sha.microserviceconsumermovie;
+package com.sha.microserviceconsumermovie.controller;
 
 import com.sha.microserviceconsumermovie.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
